@@ -56,7 +56,6 @@ Start the server:
 npm start
 
 
-API runs at http://localhost:8080
 
 🚀 Deployment
 
