@@ -1,72 +1,27 @@
-User Management REST API – Backend Intern Assignment
-📌 Overview
+# User Management REST API – Backend Assignment
 
-A RESTful API for managing users with CRUD operations using Node.js, Express, and SQLite.
+## Overview
+A RESTful API to perform CRUD operations on users stored in SQLite database.
 
-🚀 Features
+## Features
+- GET /api/users – fetch all users
+- GET /api/users/:id – fetch single user
+- POST /api/users – create new user
+- PUT /api/users/:id – update user
+- DELETE /api/users/:id – delete user
+- Server-side validation and error handling
 
-Fetch all users (GET /api/users)
+## Tech Stack
+- Node.js
+- Express.js
+- SQLite
+- CORS
 
-Fetch single user (GET /api/users/:id)
-
-Create new user (POST /api/users)
-
-Update user (PUT /api/users/:id)
-
-Delete user (DELETE /api/users/:id)
-
-Server-side validation for required fields
-
-Proper error handling
-
-🛠️ Tech Stack
-
-Node.js
-
-Express.js
-
-SQLite
-
-CORS
-
-📂 Project Structure
-user-management-api/
+## Project Structure
+backend/
+├── database.js # SQLite connection & table creation
+├── server.js # Express server setup
 ├── routes/
-│   └── users.js        # API routes
-├── database.js         # SQLite DB connection & table setup
-├── server.js           # Main server file
+│ └── users.js # API routes
 ├── package.json
-└── README.md
-
-⚡ Setup & Run Locally
-
-Clone the repo:
-
-git clone <repo-url>
-cd user-management-api
-
-
-Install dependencies:
-
-npm install
-
-
-Start the server:
-
-npm start
-
-
-
-🚀 Deployment
-
-Deploy on Render, Heroku, or any Node.js hosting platform.
-
-Ensure users.db is included or initialized on the server.
-
-📝 Notes
-
-Follows RESTful conventions
-
-Returns proper HTTP status codes (200, 201, 400, 404)
-
-SQLite is lightweight and file-based
+└── .gitignore
