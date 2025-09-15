@@ -1,40 +1,73 @@
-# User Management REST API
+User Management REST API – Backend Intern Assignment
+📌 Overview
 
-This project implements a simple User Management REST API using **Node.js**, **Express**, and **SQLite**.
-It supports CRUD operations on users and is suitable as a backend for small frontend projects or assignments.
+A RESTful API for managing users with CRUD operations using Node.js, Express, and SQLite.
 
-## Features
-- `GET /api/users` - List all users
-- `GET /api/users/:id` - Get single user by id
-- `POST /api/users` - Create a new user (name and email required)
-- `PUT /api/users/:id` - Update an existing user
-- `DELETE /api/users/:id` - Delete a user
+🚀 Features
 
-## Tech Stack
-- Node.js + Express
-- SQLite (file-based database)
-- CORS enabled
+Fetch all users (GET /api/users)
 
-## How to run locally
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the server (development):
-   ```bash
-   npm start
-   ```
-   or with plain Node:
-   ```bash
-   npm run start:node
-   ```
-3. The server listens on `http://localhost:8080` by default.
-   - You can change the port using environment variable `PORT`.
+Fetch single user (GET /api/users/:id)
 
-## Database
-The SQLite database file `users.db` is created automatically on first run.
-The `database.js` file ensures the `users` table exists.
+Create new user (POST /api/users)
 
-## Notes
-- `users.db` is included in `.gitignore` to avoid committing the database file.
-- This API returns JSON responses suitable for frontend consumption.
+Update user (PUT /api/users/:id)
+
+Delete user (DELETE /api/users/:id)
+
+Server-side validation for required fields
+
+Proper error handling
+
+🛠️ Tech Stack
+
+Node.js
+
+Express.js
+
+SQLite
+
+CORS
+
+📂 Project Structure
+user-management-api/
+├── routes/
+│   └── users.js        # API routes
+├── database.js         # SQLite DB connection & table setup
+├── server.js           # Main server file
+├── package.json
+└── README.md
+
+⚡ Setup & Run Locally
+
+Clone the repo:
+
+git clone <repo-url>
+cd user-management-api
+
+
+Install dependencies:
+
+npm install
+
+
+Start the server:
+
+npm start
+
+
+API runs at http://localhost:8080
+
+🚀 Deployment
+
+Deploy on Render, Heroku, or any Node.js hosting platform.
+
+Ensure users.db is included or initialized on the server.
+
+📝 Notes
+
+Follows RESTful conventions
+
+Returns proper HTTP status codes (200, 201, 400, 404)
+
+SQLite is lightweight and file-based
